@@ -1,0 +1,62 @@
+{
+    "name": "Diaries Of A Hero",
+    "albumCover": "public/images/albumCovers/DiariesOfAHero.png",
+    "releaseYear": "2014",
+    "tracks": [
+        {
+            "id": 1,
+            "name": "Intro",
+            "path": "public/songs/Ateraxia.mp3"
+        },
+        {
+            "id": 2,
+            "name": "Solitude",
+            "path": "public/songs/Solitude.mp3"
+        },
+        {
+            "id": 3,
+            "name": "Manimal",
+            "path": "public/songs/Manimal.mp3"
+        },
+        {
+            "id": 4,
+            "name": "J5",
+            "path": "public/songs/J5.mp3"
+        },
+        {
+            "id": 5,
+            "name": "Throne",
+            "path": "public/songs/Throne.mp3"
+        },
+        {
+            "id": 6,
+            "name": "Scarwhores",
+            "path": "public/songs/Scarwhores.mp3"
+        },
+        {
+            "id": 7,
+            "name": "Highschool Funeral",
+            "path": "public/songs/Highschool Funeral.mp3"
+        },
+        {
+            "id": 8,
+            "name": "Get Away",
+            "path": "public/songs/Get Away.mp3"
+        },
+        {
+            "id": 9,
+            "name": "Victims of Chaos",
+            "path": "public/songs/Victims of Chaos.mp3"
+        },
+        {
+            "id": 10,
+            "name": "Neruda",
+            "path": "public/songs/Neruda.mp3"
+        },
+        {
+            "id": 11,
+            "name": "Brother",
+            "path": "public/songs/Brother.mp3"
+        }
+    ]
+}
