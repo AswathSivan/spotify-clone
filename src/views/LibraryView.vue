@@ -26,7 +26,19 @@
                 </div>
             </div>
         </div>
-
+        <div class="pt-6"></div>
+        <div class="flex  justify-between px-5 pt-2">
+            <div class="flex items-center justify-between text-gray-400">
+                <div class="mr-7">#</div>
+                <div class="text-sm">Title</div>
+            </div>
+            <div><ClockTimeThreeOutline fillColor="#FFFFFF" :size="18"/></div>
+        </div>
+        <div class="border-b border-b-[#2A2A2A] mt-2"></div>
+        <div class="mb-4"></div>
+        <ul class="w-full" v-for="track, index in artist.tracks" :key="track">
+            <SongRow :artist="artist" :track="track" :index="++index"/>
+        </ul>
     </div>
 
 </template>
