@@ -7,6 +7,7 @@ import ChevronDown from "vue-material-design-icons/ChevronDown.vue";
 import ChevronRight from "vue-material-design-icons/ChevronRight.vue";
 import ChevronLeft from "vue-material-design-icons/ChevronLeft.vue";
 import MenuItem from "./components/MenuItem.vue"
+import MusicPlayer from './components/Musicplayer.vue'
 const openmenu = ref(false)
 </script>
 
@@ -90,6 +91,7 @@ const openmenu = ref(false)
         <RouterView />
         <div class="mb-[100px]"></div>
     </div>
+    <MusicPlayer></MusicPlayer>
 </template>
 
 <style scoped></style>
