@@ -3,16 +3,19 @@
         @mouseleave="isHover = false">
         <div class="flex items-center w-full py-1.5">
             <div v-if="isHover" class="w-[40px] ml-[14px] mr-[6px] cursor-pointer">
-                <Play v-if="true" fillColor="#ffffff" :size="25"></Play>
-                <Pause v-else fillColor="#ffffff" :size="25"></Pause>
+                <Play v-if="!isPlaying" fillColor="#ffffff" :size="25" @click="song.playOrPauseThisSong(artist,track)"></Play>
+                <Play v-else-if="isPlaying && currentTrack.name !== track.name" fillColor="#ffffff" :size="25" @click="song.loadSong(artist,track)"></Play>
+                <Pause v-else fillColor="#ffffff" :size="25" @click="song.playOrPauseSong()"></Pause>
             </div>
             <div v-else class="text-white font-semibold w-[40px] ml-5">
-                <span>
+                <span :class="{'text-green-500': currentTrack && currentTrack.name === track.name}">
                     {{ index }}
                 </span>
             </div>
             <div>
-                <div class="text-white font-semibold">
+                <div 
+                :class="{'text-green-500': currentTrack && currentTrack.name === track.name}"
+                class="text-white font-semibold">
                     {{ track.name }}
                 </div>
                 <div class="text-sm font-semibold text-gray-400">
@@ -39,6 +42,10 @@ import { ref, toRefs, onMounted } from 'vue';
 import Heart from 'vue-material-design-icons/Heart.vue';
 import Play from 'vue-material-design-icons/Play.vue';
 import Pause from 'vue-material-design-icons/Pause.vue';
+import { useSongStore } from '@/stores/songStore';
+import { storeToRefs } from 'pinia';
+const song = useSongStore()
+const { isPlaying, currentTrack } = storeToRefs(song)
 const props = defineProps({
     track: Object,
     artist: Object,
